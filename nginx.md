@@ -1,6 +1,6 @@
 # nginx 学习笔记
 ## 底层原理  
->nginx启动时分为1个master进程和和一系列工作进程（nginx.conf配置工作进程数）；master进程管理工作进程，工作进程负载各种工作  
+>nginx启动时分为1个master进程和和一系列工作进程（nginx.conf配置工作进程数）；master进程管理工作进程，工作进程负责各种工作  
 底层架构：epoll+进程池   
 每来一个进程，就交给一个工作进程出来，不会阻塞  
 启动时，master建立好listen套接字，监听配置好的端口，然后会fork出n个工作进程，共享这个socket；当有链接到来，所有worker线程的listen套接字变为可读，各worker竞争，获得锁的接受请求；
