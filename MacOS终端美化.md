@@ -331,8 +331,8 @@ EOF
 
 main "$@"
 ```
-* 2、配置zsh
-2.1、 vim ~/.zshrc 打开zshrc  
+* 2、配置zsh  
+2.1、 vim ~/.zshrc 打开zshrc    
 2.2、找到ZSH_THEME="robbyrussell" 这行修改robbyrussell为agnoster  
 2.3、 安装Powerline字体 -- cd ~/Downloads && git clone https://github.com/powerline/fonts.git  
 同样是从github上clone，失败就手动去下载吧  
