@@ -6,6 +6,8 @@
 [实习+秋招面试经历](https://github.com/EricOo0/zhifengwei.blog/blob/main/22实习秋招面试记录.md)  
 ## 日常搞事情部分
 [mac终端简单美化](https://github.com/EricOo0/zhifengwei.blog/blob/main/MacOS%E7%BB%88%E7%AB%AF%E7%BE%8E%E5%8C%96.md)
+[macOS下c++开发环境搭建](https://github.com/EricOo0/zhifengwei.blog/blob/main/MacOS下C++开发环境搭建.md)
+
 
 
 
