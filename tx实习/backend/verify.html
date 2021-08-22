@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document测试界面</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    h3 {
+        text-align: center;
+        display: block;
+        margin: 20px auto;
+        background-color: rgb(235, 138, 135);
+    }
+     form {
+         margin: 25px auto;
+         width: 410px;
+         padding: 0.5em;
+         border: 1px solid #ccc;
+         border-radius: 1em;
+     }
+
+    ul {
+        list-style: none;
+        padding: 10;
+        margin: 0;
+    }
+
+    form li + li {
+        margin-top: 1em;
+    }
+
+    label {
+       display: inline-block;
+        width: 90px;
+        text-align: center;
+    }
+    label.f3 {
+       display: inline-block;
+        width: 400px;
+        text-align: center;
+    }
+    label.f2 {
+       display: inline-block;
+        width: 200px;
+        text-align: center;
+    }
+    label.xrequired:after {
+        content: '* ';
+        color: red;
+    }
+    p{
+        display: inline-block;
+        font: 1em sans-serif;
+        width: 300px;
+        box-sizing: border-box;
+        
+    }
+    input,
+    textarea {
+        font: 1em sans-serif;
+        width: 300px;
+        box-sizing: border-box;
+        border: 1px solid #999;
+    }
+    input.f2 {
+        font: 1em sans-serif;
+        width: 200px;
+        box-sizing: border-box;
+        border: 1px solid #999;
+    }
+    input:focus,
+    textarea:focus {
+        border-color: #000;
+    }
+
+    textarea {
+        vertical-align: top;
+        height: 5em;
+    }
+    small{
+      
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-table;
+        width: 300px;
+        text-align: right;
+    }
+    small[a2],[a3],[a4]{
+      
+      font-family: Arial, Helvetica, sans-serif;
+      display: inline-table;
+      width: 350px;
+      text-align: center;
+  }
+    small[a5]{
+      
+      font-family: Arial, Helvetica, sans-serif;
+      display: inline-table;
+      width: 400px;
+      text-align: right;
+  }
+    .button1 {
+        display: table-row;
+        
+        margin-right: 250px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .button2  {
+        display:table-row;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .buttonarea{
+        margin:0 auto; 
+        width:400px;  
+      
+        
+    }
+  
+</style>
+
+<body>
+<h3>实时流水沙箱审核</h3>
+<form id="form_2" action="" target="">
+    <ul>
+        <li>
+            <label class="f3" >配置申请信息 </label>
+
+            <li>
+                <label for="FTarget">FTarget: </label>
+                <p name="target" id="target">业务名</p>
+            
+            </li>
+            <li>
+                <label  for="L5">Modid: </label>
+                <p>L5 id</p>
+             
+            </li>
+            <li>
+                <label  for="Path">Path: </label>
+                <p>推送路径</p>
+                
+            </li>
+            <li>
+                <label for="FOfferID">FOfferID: </label>
+                <p>offerid</p>
+                
+            </li>
+            
+        </li>
+        
+    </ul>
+</form>
+<form id="form_2" action="" target="">
+    <ul>
+        <li>
+            <label class="f3" >配置申请字段 </label>
+            <li>
+                <label class=f2 for="ChannelID">ChannelID: </label>
+                <input class=f2 type="checkbox" id="ChannelID" checked />
+            </li>
+            <li>
+                <label class=f2 for="ClientVer">ClientVer: </label>
+                <input class=f2 type="checkbox" id="ClientVer" checked />
+            </li>
+            <li>
+                <label class=f2 for="OfferID">OfferID: </label>
+                <input class=f2 type="checkbox" id="OfferID" checked/>
+            </li>
+            <li>
+                <label class=f2 for="OrigPayAmt">OrigPayAmt: </label>
+                <input class=f2 type="checkbox" id="OrigPayAmt" checked />
+            </li>
+            <li>
+                <label class=f2 for="PayAmt">PayAmt: </label>
+                <input class=f2 type="checkbox" id="PayAmt" checked />
+            </li>
+            <li>
+                <label class=f2 for="PayChannel">PayChannel: </label>
+                <input class=f2 type="checkbox" id="PayChannel" checked />
+            </li>
+            <li>
+                <label class=f2 for="PayChannelSubId">PayChannelSubId: </label>
+                <input class=f2 type="checkbox" id="PayChannelSubId" checked />
+            </li>
+            <li>
+                <label class=f2 for="PfChannel">PfChannel: </label>
+                <input class=f2 type="checkbox" id="PfChannel" checked />
+            </li>
+	 <li>
+            <label class=f2 for="ProvideUin">ProvideUin: </label>
+            <input class=f2 type="checkbox" id="ProvideUin" name="FPushField" value="ProvideUin" />
+        </li>
+        <li>
+            <label class=f2 for="PortalSerialNo">PortalSerialNo: </label>
+            <input class=f2 type="checkbox" id="PortalSerialNo" name="FPushField" value="PortalSerialNo" />
+        </li>
+        <li>
+            <label class=f2 for="ServiceCode">ServiceCode: </label>
+            <input class=f2 type="checkbox" id="ServiceCode" name="FPushField" value="ServiceCode" />
+        </li>
+        <li>
+            <label class=f2 for="SessionType">SessionType: </label>
+            <input class=f2 type="checkbox" id="SessionType" name="FPushField" value="SessionType" />
+        </li>        
+        <li>
+            <label class=f2 for="ProvideOpenID">ProvideOpenID: </label>
+            <input class=f2 type="checkbox" id="ProvideOpenID" name="FPushField" value="ProvideOpenID" />
+        </li>       
+         <li>
+            <label class=f2 for="XaProvideUin">XaProvideUin: </label>
+            <input class=f2 type="checkbox" id="XaProvideUin" name="FPushField" value="XaProvideUin" />
+        </li>
+         </li>
+        
+    </ul>
+</form>
+<form id="form_3" action="" target="">
+    <ul>
+        <li>
+            <label for="extra">额外字段: </label>
+            <p>extra</p>
+        </li>
+
+    </ul>
+</form>
+
+<div class="buttonarea">
+<button  class="button1" onclick="ack()" type="submit">确认</button>
+<button class="button2" onclick="reject()" type="resset">拒绝</button>    
+</div>
+
+
+<script type="text/javascript">
+    function reject(){
+
+        var httpRequest = new XMLHttpRequest();
+        var Ftarget=document.getElementById("target").innerHTML;
+        console.log(Ftarget);
+        var url="/config.sh?status=reject&Ftarget="+Ftarget;
+        httpRequest.open("POST",url,true);
+        httpRequest.setRequestHeader("Content-Type","");
+        httpRequest.send("");
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                var json = httpRequest.responseText;//获取到json字符串，还需解析
+                alert("审批结束，已拒绝");
+		
+                document.body.innerHTML="";
+    }
+    
+    }
+    }
+    function ack(){
+        var httpRequest = new XMLHttpRequest();
+        var Ftarget=document.getElementById("target").innerHTML;
+        console.log(Ftarget);
+        var url="/config.sh?status=accept&Ftarget="+Ftarget;
+        httpRequest.open("POST",url,true);
+        httpRequest.setRequestHeader("Content-Type","");
+        
+        httpRequest.send("");
+        httpRequest.onreadystatechange = function () {
+        
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                var json = httpRequest.responseText;//获取到json字符串，还需解析
+                alert("审批结束，已同意");
+                
+                document.body.innerHTML="";
+    }
+    
+    }
+       
+    }
+</script>
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沙箱实时流水</title>
+    <style>
+    .container {
+        position:relative;
+        left:0%;
+        top: 51px;
+        }
+    
+    .logo {
+        width: 100%;
+        height: 50px;
+        background-color: #10bbda;
+        position: absolute;
+        text-align: center;
+        line-height: 50px;
+    }
+    
+    .main {
+        width: 30%;
+        height: 50%;
+        margin:auto;
+        background-color: #fffdf9;
+    }
+    
+    .sider {
+        position:relative;
+        width: 30%;
+        height: 50%;
+        background-color: #ffe3ed;
+    }
+    
+    .footer {
+        position:static;
+        background-color: #8ac6d1;
+        text-align: left;
+       
+    }
+    
+    </style>
+</head>
+
+<body>
+        <div class="logo">
+           <p> 实时流水沙箱</p>
+        </div>
+        <div class="container">
+        <div class="sider">
+        FTarget: <input type="text" name="FTarget" id="FTarget"><br>
+        modid: <input type="text" name="modid" id="modid"><br>
+        cmdid: <input type="text" name="cmdid" id="cmdid"><br>
+        path: <input type="text" name="path" id="path"><br>
+        FOfferID: <input type="text" name="FOfferID" id="FOfferID"><br>
+       
+       </div>
+       <div class="sider">
+        <input type="checkbox" name="FPushField" value="ChannelID">ChannelID<br>
+        <input type="checkbox" name="FPushField" value="ClientVer">ClientVer<br>
+        <input type="checkbox" name="FPushField" value="OfferID">OfferID<br>
+        <input type="checkbox" name="FPushField" value="OrigPayAmt">OrigPayAmt<br>
+        <input type="checkbox" name="FPushField" value="PayAmt">PayAmt<br>
+        <input type="checkbox" name="FPushField" value="PayChannel">PayChannel<br>
+        <input type="checkbox" name="FPushField" value="PayChannelSubId">PayChannelSubId<br>
+        <input type="checkbox" name="FPushField" value="PfChannel">PfChannel<br>
+        <input type="checkbox" name="FPushField" value="ProvideUin">ProvideUin<br>
+        <input type="checkbox" name="FPushField" value="PortalSerialNo">PortalSerialNo<br>
+        <input type="checkbox" name="FPushField" value="ServiceCode">ServiceCode<br>
+        <input type="checkbox" name="FPushField" value="SessionType">SessionType<br>
+        <input type="checkbox" name="FPushField" value="ProvideOpenID">ProvideOpenID<br>
+        <input type="checkbox" name="FPushField" value="XaProvideUin">XaProvideUin<br>
+        <button name="button" id=1 onclick="myclick()">clike me</button>
+       </div>
+        </div>
+       <div class="footer">
+        <p id="2">6666 </p>
+        </div>
+        
+        
+        <script type="text/javascript"> 
+        function myclick(){
+            text=document.getElementById("2");
+            var Ftarget = document.getElementById('FTarget').value;
+            var modid = document.getElementById('modid').value;
+            var cmdid = document.getElementById('cmdid').value;
+            var path = document.getElementById('path').value;
+            var FOfferID = document.getElementById('FOfferID').value;
+            var s1="insert into t_push_interface set FTarget=\"" +Ftarget+"\""+",FUserDefType=0,FUserDefSo=\"\",FStandardResultType=\"standard_00\",FService=\"http\",FLable=\""+Ftarget+"\""+"FPushField=\"PushServer=realwater;";
+            var s2="insert into t_interface_conf set FService=\"http\",FLable=\""+Ftarget+"\",FConf=\"access_mode=l5&modid=\""+modid+"&cmdid="+cmdid+"&time_out_ms=200&total_time_out_ms=300&retry_cnt=2&url_path="+path+"\",FStatus=1,FCreateTime=now(),FUpdateTime=now();";
+            var s3="insert into t_push_condition set FTarget=\""+Ftarget+"\",FIndex=\"001\",FOfferIDList=\""+FOfferID+"\",FLoginTypeList=\"*\",FClientVerList=\"*\",FServiceTypeList=\"*\",FServiceCodeList=\"*\",FPayChannelList=\"*\",FPfChannelList=\"*\",FPfVersionList=\"*\",FSourceList=\"*\",FStatus=1,FCreateTime=now(),FUpdateTime=now(),FFriendsPayFlag=\"*\",FSubCmdCode=\"provide_suc\",FExtCondition1=\"*\",FExtCondition2=\"*\",FExtCondition3=\"*\",FExtCondition4=\"*\",FExtCondition5=\"*\",FPushVer=1;"
+            
+            var obj = document.getElementsByName('FPushField');
+            var s = '';
+            for (var i = 0; i < obj.length; i++) {
+                if (obj[i].checked){
+                    
+                        s += obj[i].value + ',';
+                    }
+            }
+            s = s.substr(0, s.length - 1);
+            s1 =s1+s+";TransTime:Time\""+",FExtraConf=\"\",FNeedRedo=\"Y\",FStatus=1,FCreateTime=now(),FUpdateTime=now(),FSignType=\"\";";
+            text.innerHTML=s1+"<br/>"+s2+"<br/>"+s3;
+        }
+            </script>
+</body>
+</html>

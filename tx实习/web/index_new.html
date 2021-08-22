@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document测试界面</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    h3 {
+        text-align: center;
+        display: block;
+        margin: 10px auto;
+        background-color: skyblue;
+    }
+     form {
+         margin: 5px auto;
+         width: 410px;
+         padding: 0.5em;
+         border: 1px solid #ccc;
+         border-radius: 1em;
+     }
+     form.form1 {
+        
+         margin-left: 550px auto;
+         width: 410px;
+         padding: 0.5em;
+         border: 1px solid #ccc;
+         border-radius: 1em;
+     }
+     form.form2 {
+         
+         margin-left: 1000px auto;
+         width: 450px;
+         padding: 0.5em;
+         border: 1px solid #ccc;
+         border-radius: 1em;
+     }
+
+    ul {
+        list-style: none;
+        padding: 10;
+        margin: 0;
+    }
+
+    form li + li {
+        margin-top: 1em;
+    }
+
+    label {
+       display: inline-block;
+        width: 90px;
+        text-align: center;
+    }
+    label.f2 {
+       display: inline-block;
+        width: 200px;
+        text-align: center;
+    }
+    label.xrequired:after {
+        content: '* ';
+        color: red;
+    }
+
+    input,
+    textarea {
+        font: 1em sans-serif;
+        width: 300px;
+        box-sizing: border-box;
+        border: 1px solid #999;
+    }
+    input.f2 {
+        font: 1em sans-serif;
+        width: 200px;
+        box-sizing: border-box;
+        border: 1px solid #999;
+    }
+    input:focus,
+    textarea:focus {
+        border-color: #000;
+    }
+
+    textarea {
+        vertical-align: top;
+        height: 5em;
+    }
+    small{
+      
+        font:bold;
+        display: inline-table;
+        width: 300px;
+        text-align: right;
+    }
+    small[a2],[a3],[a4]{
+      
+      font:bold;
+      display: inline-table;
+      width: 350px;
+      text-align: center;
+  }
+    small[a5]{
+      
+      font:bold;
+      display: inline-table;
+      width: 360px;
+      text-align: right;
+  }
+  small[a6]{
+      
+      font:bold;
+      display: inline-table;
+      width: 320px;
+      text-align: right;
+  }
+  small[a7]{
+      
+      font:oblique;
+      display: inline-table;
+      margin-left: 20%;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+  }
+    .button1 {
+        display: table-row;
+        
+        margin-right: 130px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .button2  {
+        display:table-row;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .buttonarea{
+        margin:0 auto; 
+        width:400px;     
+    }
+
+</style>
+
+<body>
+<h3>实时流水沙箱推送配置</h3>
+<form id="form_1" action="" target="">
+    <ul>
+        <li>
+            <label class="xrequired" for="FTarget">FTarget: </label>
+            <input type="text" id="FTarget" name="user_1" />
+            <small a1 name="a1">字母,数字,或下划线组成:apple_1</small>
+        </li>
+        <li>
+            <label class="xrequired" for="Modid">Modid: </label>
+            <input type="text" id="Modid" name="user_2" />
+            <small a2 name="a1">L5 modid 该项不能为空</small>
+        </li>
+        <li>
+            <label class="xrequired" for="Cmdid">Cmdid: </label>
+            <input type="text" id="Cmdid" name="user_3" />
+            <small a3 name="a1">L5 Cmdid 该项不能为空</small>
+        </li>
+        <li>
+            <label class="xrequired" for="Path">Path: </label>
+            <input type="text" id="Path" name="user_4" />
+            <small a4 name="a1">推送路径: /midas/abc</small>
+        </li>
+        <li>
+            <label class="xrequired" for="FOfferID">FOfferID: </label>
+            <input type="text" id="FOfferID" name="user_5" />
+            <small a5 type="a5" name="a5">OfferID 号，以','分隔，不能出现中文逗号，</small a5>
+        </li>
+        <li>
+            <label class="xrequired" for="checker">审核人: </label>
+            <input type="text" id="checker" name="user_6" />
+            <small a6 type="a6">审核人邮箱号前缀：例：zhifengwei</small>
+        </li>
+
+    </ul>
+</form>
+
+<h3>配置字段</h3>
+
+<form class="form1" id="form_2" action="" target="">
+    <ul>
+        <li>
+            <label class=f2 for="ChannelID">ChannelID: </label>
+            <input class=f2 type="checkbox" id="ChannelID" name="FPushField" value="ChannelID" />
+        </li>
+        <li>
+            <label class=f2 for="ClientVer">ClientVer: </label>
+            <input class=f2 type="checkbox" id="ClientVer" name="FPushField" value="ClientVer" />
+        </li>
+        <li>
+            <label class=f2 for="OfferID">OfferID: </label>
+            <input class=f2 type="checkbox" id="OfferID" name="FPushField" value="OfferID" />
+        </li>
+        <li>
+            <label class=f2 for="OrigPayAmt">OrigPayAmt: </label>
+            <input class=f2 type="checkbox" id="OrigPayAmt" name="FPushField" value="OrigPayAmt" />
+        </li>
+        <li>
+            <label class=f2 for="PayAmt">PayAmt: </label>
+            <input class=f2 type="checkbox" id="PayAmt" name="FPushField" value="PayAmt" />
+        </li>
+        <li>
+            <label class=f2 for="PayChannel">PayChannel: </label>
+            <input class=f2 type="checkbox" id="PayChannel" name="FPushField" value="PayChannel" />
+        </li>
+        <li>
+            <label class=f2 for="PayChannelSubId">PayChannelSubId: </label>
+            <input class=f2 type="checkbox" id="PayChannelSubId" name="FPushField" value="PayChannelSubId" />
+        </li>
+        <li>
+            <label class=f2 for="PfChannel">PfChannel: </label>
+            <input class=f2 type="checkbox" id="PfChannel" name="FPushField" value="PfChannel" />
+        </li>
+        <li>
+            <label class=f2 for="ProvideUin">ProvideUin: </label>
+            <input class=f2 type="checkbox" id="ProvideUin" name="FPushField" value="ProvideUin" />
+        </li>
+        <li>
+            <label class=f2 for="PortalSerialNo">PortalSerialNo: </label>
+            <input class=f2 type="checkbox" id="PortalSerialNo" name="FPushField" value="PortalSerialNo" />
+        </li>
+        <li>
+            <label class=f2 for="ServiceCode">ServiceCode: </label>
+            <input class=f2 type="checkbox" id="ServiceCode" name="FPushField" value="ServiceCode" />
+        </li>
+        <li>
+            <label class=f2 for="SessionType">SessionType: </label>
+            <input class=f2 type="checkbox" id="SessionType" name="FPushField" value="SessionType" />
+        </li>        
+        <li>
+            <label class=f2 for="ProvideOpenID">ProvideOpenID: </label>
+            <input class=f2 type="checkbox" id="ProvideOpenID" name="FPushField" value="ProvideOpenID" />
+        </li>       
+         <li>
+            <label class=f2 for="XaProvideUin">XaProvideUin: </label>
+            <input class=f2 type="checkbox" id="XaProvideUin" name="FPushField" value="XaProvideUin" />
+        </li>
+
+    </ul>
+</form>
+<form class="form2"id="form_3" action="" target="">
+    <ul>
+        <li>
+            <label for="extra">额外字段: </label>
+            <input type="text" id="extra" name="user_5" />
+            <small a7 type="a7">例:ProductId:productid,ZoneId:ori_zoneid</small>
+        </li>
+
+    </ul>
+</form>
+
+<div class="buttonarea">
+<button  class="button1" onclick="myclick()" type="submit">Click to Submit</button>
+<button class="button2" onclick="resset()" type="resset">Click to Reset</button>    
+</div>
+
+
+<script type="text/javascript">
+        var s1="";
+        var s2="";
+        var s3="";
+        
+    function resset(){
+        location.reload();
+    }
+    function myclick(){
+       // let text = document.getElementById("output");
+        let Ftarget = document.getElementById('FTarget').value;
+        let modid = document.getElementById('Modid').value;
+        let cmdid = document.getElementById('Cmdid').value;
+        let path = document.getElementById('Path').value;
+        let FOfferID = document.getElementById('FOfferID').value;
+        let checker = document.getElementById('checker').value;
+        let extra = document.getElementById('extra').value;
+        //let s1="insert into t_push_interface set FTarget=\"" +Ftarget+"\""+",FUserDefType=0,FUserDefSo=\"\",FStandardResultType=\"standard_00\",FService=\"http\",FLable=\""+Ftarget+"\""+"FPushField=\"PushServer=realwater;";
+        //let s2="insert into t_interface_conf set FService=\"http\",FLable=\""+Ftarget+"\",FConf=\"access_mode=l5&modid=\""+modid+"&cmdid="+cmdid+"&time_out_ms=200&total_time_out_ms=300&retry_cnt=2&url_path="+path+"\",FStatus=1,FCreateTime=now(),FUpdateTime=now();";
+        //let s3="insert into t_push_condition set FTarget=\""+Ftarget+"\",FIndex=\"001\",FOfferIDList=\""+FOfferID+"\",FLoginTypeList=\"*\",FClientVerList=\"*\",FServiceTypeList=\"*\",FServiceCodeList=\"*\",FPayChannelList=\"*\",FPfChannelList=\"*\",FPfVersionList=\"*\",FSourceList=\"*\",FStatus=1,FCreateTime=now(),FUpdateTime=now(),FFriendsPayFlag=\"*\",FSubCmdCode=\"provide_suc\",FExtCondition1=\"*\",FExtCondition2=\"*\",FExtCondition3=\"*\",FExtCondition4=\"*\",FExtCondition5=\"*\",FPushVer=1;"
+        var data=`FTarget=${Ftarget}&modid=${modid}&cmdid=${cmdid}&path=${path}&FOfferID=${FOfferID}&checker=${checker}`;
+        let obj = document.getElementsByName('FPushField');
+        console.log(obj);
+        let s = '';
+        for (let i = 0; i < obj.length; i++) {
+            console.log(obj[i].value);
+            if (obj[i].checked)  s += obj[i].value + ',';
+        }
+        s = s.substr(0, s.length - 1);
+        //s1 =s1+s+";TransTime:Time\""+",FExtraConf=\"\",FNeedRedo=\"Y\",FStatus=1,FCreateTime=now(),FUpdateTime=now(),FSignType=\"\";";
+        data=data+`&FPushField=${s}&extra=${extra}`;
+        console.log(data);
+        //text.innerHTML=s1+"<br/>"+s2+"<br/>"+s3;
+        post_msg(data);
+        console.log(s1);
+        console.log(s2);
+
+    }
+    function post_msg(data){
+
+        var str=data;
+        var httpRequest = new XMLHttpRequest();
+        httpRequest.open("POST","data.sh",true);
+        httpRequest.setRequestHeader("Content-Type","");
+        httpRequest.send(str);
+        httpRequest.onreadystatechange = function () {
+        
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                var json = httpRequest.responseText;//获取到json字符串，还需解析
+                var code=json.match(/\d+/g);
+                var index=json.indexOf("result_info:");
+                var info=json.substr(index);
+                console.log(info)
+                if(code == 0){
+                    console.log("success");
+                    alert("配置成功!已向审核人发送邮件申请");
+                }
+                else{
+                    console.log("failed");
+                    alert("配置失败!"+info);
+                }
+                
+                
+                 
+                location.reload();
+            }
+        }
+    
+    
+       
+    }
+</script>
+</body>
+</html>
