@@ -78,4 +78,4 @@ flag=`ps aux | grep ${process} | awk '$11~/ewp_agent$/ {print $2}' |wc -l`： / 
 单个字符匹配:.
 
 # md工具
->typora
+>typora 
