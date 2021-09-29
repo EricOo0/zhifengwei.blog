@@ -3,7 +3,7 @@
 
 [vim config](https://github.com/EricOo0/zhifengwei.blog/blob/main/vimcinfig.md)
 
-[docker command]([vim config](https://github.com/EricOo0/zhifengwei.blog/blob/main/docker相关.md))
+[docker command](https://github.com/EricOo0/zhifengwei.blog/blob/main/docker相关.md)
 
 [nginx](https://github.com/EricOo0/zhifengwei.blog/blob/main/nginx.md)  
 
