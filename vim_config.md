@@ -31,3 +31,8 @@ set hlsearch                    "高亮搜索项"
 set noexpandtab                 "不允许扩展table"
 set whichwrap+=<,>,h,l
 set autoread
+" 支持中文  -------------------------------------
+set fileencodings=utf-8,gb2312,gbk,gb18030
+set termencoding=utf-8
+set fileformats=unix
+set encoding=prc
