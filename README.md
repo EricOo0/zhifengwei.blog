@@ -1,7 +1,7 @@
 # Welcome to my GitHub Pages 
 **日常记录**     
 
-[vim config](https://github.com/EricOo0/zhifengwei.blog/blob/main/vimcinfig.md)
+[vim config](https://github.com/EricOo0/zhifengwei.blog/blob/main/vimconfig.md)
 
 [docker command](https://github.com/EricOo0/zhifengwei.blog/blob/main/docker相关.md)
 
