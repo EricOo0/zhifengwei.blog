@@ -29,6 +29,14 @@ docker run -ti -p 80:80 -name=go_server imageid /bin/bash --创建容器并指�
 
 docker commit -m "信息" 容器id/容器名 镜像名
 
+docker tag imagesid 仓库地址如weiz0016/docker_warup
+
+Docker push  weiz0016/docker_warmup 吧镜像推到仓库
+
+docker login 登陆。weiz0016 weizhifeng10
+
+docker pull weiz0016/docker_warmup
+
 
 
 # dockfile
