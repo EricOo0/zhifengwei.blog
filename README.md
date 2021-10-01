@@ -1,5 +1,13 @@
 # Welcome to my GitHub Pages 
+**Github 首页设置**     
+
+------
+
+
+
 **日常记录**     
+
+------
 
 [vim config](https://github.com/EricOo0/zhifengwei.blog/blob/main/vimconfig.md)
 
