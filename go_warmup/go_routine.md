@@ -233,26 +233,3 @@ func dirents(dir string) []os.FileInfo {
       return nil }
    return entries
 }
-```
-
-1 #! /bin/bash
-  2 #ssh liqi@10.89.11.240
-  3 #ssh s121md209_06@dl2080-09.dynip.ntu.edu.sg
-  4 #6M!s@c#0916
-  5 if [ $# == 1 ]
-  6 then
-  7     echo "22"
-  8     if [ $1 == 1]
-  9     then
- 10         echo 'ssh liqi@10.89.11.240'
- 11         ssh liqi@10.89.11.240
- 12     else if [ $1 == 2 ]
- 13     then
- 14         echo 'ssh s121md209_06@dl2080-09.dynip.ntu.edu.sg'
- 15         ssh s121md209_06@dl2080-09.dynip.ntu.edu.sg
- 16     else if [ $1 == 3 ]
- 17     then
- 18         echo 'ssh root@43.132.117.118'
- 19         ssh root@43.132.117.118
- 20     fi
- 21 fi
