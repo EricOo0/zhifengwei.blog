@@ -1,10 +1,4 @@
 # Welcome to my GitHub Pages 
-**Github 首页设置**     
-
-------
-
-
-
 **日常记录**     
 
 ------
